@@ -15,7 +15,7 @@ public class Author extends Person {
     /**
      * @deprecated Use publishedBooks instead
      */
-    @SuppressWarnings({"unchecked", "deprecation"})
+    @SuppressWarnings("unchecked")
     @Deprecated
     public List<String> getBooks() {
         return books;
@@ -29,7 +29,7 @@ public class Author extends Person {
         books.add(book);
     }
 
-    @Override
+    @SuppressWarnings(value = "sortName")
     public String sortName() {
         return String.format("%s, %s", lastName, firstName);
     }
